@@ -11,6 +11,7 @@ class MyHomePage extends StatefulWidget {
   _MyHomePageState createState() => _MyHomePageState();
 }
 int currentIndex = 0;
+var myHome = new MyHomePage();
 
 class _MyHomePageState extends State<MyHomePage> {
   void onTapped(int index) {
