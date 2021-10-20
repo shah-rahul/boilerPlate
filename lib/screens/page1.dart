@@ -20,7 +20,8 @@ class _Page1State extends State<Page1> {
         child: InkWell(
           splashColor: Colors.blue.withAlpha(30),
           onTap: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context) => SecondRoute()));
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => SecondRoute()));
           },
           child: Container(
             padding: EdgeInsets.all(20),
@@ -30,12 +31,12 @@ class _Page1State extends State<Page1> {
                 Text('Say my name'),
                 SizedBox(height: 20),
                 Hero(
-                  
-                      tag: 'catimage',
-                      child : ClipRRect(
-                  borderRadius: BorderRadius.circular(100),
-                  child: Image(
-                          image: AssetImage('lib/images/cat.jpg'), height: 100)),
+                  tag: 'catimage',
+                  child: ClipRRect(
+                      borderRadius: BorderRadius.circular(100),
+                      child: Image(
+                          image: AssetImage('lib/images/cat.jpg'),
+                          height: 100)),
                 ),
               ],
             ),
@@ -58,7 +59,9 @@ class SecondRoute extends StatelessWidget {
       body: Center(
         child: Hero(
           tag: 'catimage',
-          child: Image(image: AssetImage('lib/images/cat.jpg'),),
+          child: Image(
+            image: AssetImage('lib/images/cat.jpg'),
+          ),
         ),
       ),
     );
