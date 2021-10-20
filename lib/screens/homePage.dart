@@ -10,19 +10,21 @@ class MyHomePage extends StatefulWidget {
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
+int currentIndex = 0;
 
 class _MyHomePageState extends State<MyHomePage> {
-  List<Widget> pageList = [
-    Page1(),
-    Page2(),
-    Page3(),
-  ];
-  int currentIndex = 0;
   void onTapped(int index) {
     setState(() {
       currentIndex = index;
     });
   }
+  List<Widget> pageList = [
+    Page1(),
+    Page2(),
+    Page3(),
+  ];
+  
+  
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
             icon: Icon(Icons.access_alarm_outlined),
           ),
           BottomNavigationBarItem(
-              label: "page2",
+              label: "Cat page",
               icon: Icon(Icons.account_balance_wallet_outlined)),
           BottomNavigationBarItem(
             label: "page3",
